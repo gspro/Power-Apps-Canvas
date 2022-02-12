@@ -1,0 +1,7 @@
+Set(
+    AccountItem,
+    If(IsBlank(Param("recordId")),
+    Blank(),
+    LookUp(Accounts, Account=GUID(Substitute(Substitute(Param("recordId"),"{",""),"}","")
+    )
+)));
